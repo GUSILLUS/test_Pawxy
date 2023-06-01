@@ -93,7 +93,7 @@ html, body {
   color: #FFFFFF;
   font-weight: 600;
   font-size: 10px;
-  line-height: 15px;
+  line-height: 12px;
   letter-spacing: 0.25px;
   text-align: center;
   border-radius: 2px;
@@ -102,6 +102,7 @@ html, body {
   position: absolute;
   left: 109px;
   bottom: 12px;
+  padding: 1px 4px;
 }
 
 .video-list__info-container {
@@ -144,6 +145,7 @@ html, body {
 .video-list__linkDiv {
   display: flex;
   align-items: center;
+  cursor: pointer;
 }
 
 .video-list__videoDetails-img {
@@ -178,6 +180,7 @@ html, body {
 .navigation__bottom-row {
   display: flex;
   justify-content: space-around;
+  align-items: center;
   margin-bottom: 16px;
   padding: 16px;
 }
@@ -197,7 +200,7 @@ html, body {
   cursor: pointer;
 }
 
-.navigation__number {
+.navigation__page-number {
   font-family: 'Barlow', sans-serif;
   font-size: 14px;
   line-height: 14px;
@@ -265,6 +268,19 @@ html, body {
   margin-bottom: 8px;
 }
 
+.embed-player__iframe {
+  position: relative;
+  padding-bottom: 56.25%;
+}
+
+iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
 .embed-player__text-con {
   padding: 0 24px;
   margin-top: 16px;
@@ -283,6 +299,7 @@ html, body {
 
 .embed-player__video-info {
   display: flex;
+  align-items: center;
 }
 
 .embed-player__video-info > .video-list__person-name {
@@ -326,11 +343,164 @@ html, body {
   background-color: #5D6067;
 }
 
-.svse__iframe {
-  width: 100%;
-  height: auto
-}
+@media only screen and (min-width: 600px) {
+  .svse__container {
+    max-width: 700px;
+    padding: 40px 20px 32px;
+    margin: auto;
+  }
 
-@media only screen and (min-width: 600px) and (max-width: 900px) {
+  .header__top-row {
+    gap: 16px;
+    margin-bottom: 30px;
+  }
 
+  .header__img {
+    width: 32px;
+  }
+
+  .header__title {
+    font-size: 24px;
+    line-height: 32px;
+  }
+
+  .search-bar__container {
+    padding: 24px;
+    margin-bottom: 24px;
+  }
+
+  .search-bar__input {
+    font-size: 24px;
+    line-height: 24px;
+  }
+
+  .search-bar__img {
+    width: 32px;
+    height: 32px;
+  }
+
+  .video-list__container {
+    gap: 10px;
+    margin-bottom: 35px;
+  }
+
+  .video-list__item {
+    height: 135px;
+    padding: 12px;
+  }
+
+  .video-list__image {
+    width: 200px;
+    border-radius: 12px;
+  }
+
+  .video-list__time-duration {
+    font-size: 15px;
+    line-height: 15px;
+    border-radius: 5px;
+    height: 20px;
+    left: 162px;
+    bottom: 22px;
+    padding: 2px 6px;
+  }
+
+  .video-list__title {
+    height: 36px;
+    font-size: 17px;
+    line-height: 18px;
+    letter-spacing: 0.5px;
+    margin: 0 14px 14px 0;
+  }
+
+  .video-list__person-name {
+    font-size: 14px;
+    line-height: 14px;
+    margin-bottom: 20px;
+  }
+
+  .video-list__videoDetails-img {
+    width: 25px;
+    height: 25px;
+    margin-right: 8px;
+  }
+
+  .video-list__videoDetails-link {
+    font-size: 15px;
+    line-height: 15px;
+    letter-spacing: 0.5px;
+  }
+
+  .video-list__videoDetails-views {
+    font-size: 15px;
+    line-height: 15px;
+    letter-spacing: 0.5px;
+  }
+
+  .navigation__button {
+    font-size: 18px;
+    line-height: 20px;
+    gap: 12px;
+    cursor: pointer;
+  }
+
+  .navigation__page-number {
+    font-size: 18px;
+    line-height: 18px;
+    color: #5D6067;
+  }
+
+  .navigation__arrow {
+    width: 18px;
+    height: 18px;
+  }
+
+  .navigation__google-link {
+    font-size: 20px;
+    line-height: 20px;
+  }
+
+  .navigation__google-search-icon {
+    width: 20px;
+    height: 20px;
+  }
+
+  .unshow {
+    display: none;
+  }
+
+  .embed-player__iframe {
+    position: relative;
+    padding-bottom: 50%;
+  }
+
+  .embed-player__text-con {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .embed-player__container {
+    height: 100%;
+    background-color: white;
+  }
+
+  .embed-player__video-title {
+    font-size: 20px;
+    line-height: 20px;
+    margin-bottom: 12px;
+  }
+
+  .embed-player__button {
+    width: 100px;
+    height: 30px;
+    font-size: 16px;
+    line-height: 14px;
+  }
+
+  .embed-player__links {
+    position: absolute;
+    gap: 20px;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
 }

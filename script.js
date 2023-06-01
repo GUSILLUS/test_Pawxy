@@ -27,10 +27,10 @@ function render(datas) {
 
   if (datas) {
     buttonNext.classList.add('show');
-    googleLink.classList.add('#navigation__google-link--active');
+    googleLink.classList.add('navigation__google-link--active');
   } else {
     buttonNext.classList.remove('show');
-    googleLink.classList.remove('#navigation__google-link--active');
+    googleLink.classList.remove('navigation__google-link--active');
   }
 
   if (start > 1) {
@@ -166,6 +166,9 @@ function embedOpen(data, youtubeImg, views, personName, littleDot) {
   const closeIcon = document.querySelector('.embed-player__video-close');
   const visitButton = document.querySelector('#visitButton');
   const closeButton = document.querySelector('#closeButton');
+  const gooogleLink = document.querySelector('.navigation__google-link');
+
+  googleLink.classList.add('unshow');
 
   const cloneImg = youtubeImg.cloneNode(true);
   const cloneViews = views.cloneNode(true);
@@ -177,10 +180,10 @@ function embedOpen(data, youtubeImg, views, personName, littleDot) {
 
   visitButton.setAttribute('href', data.url);
 
-  littleDot.setAttribute('src', './assets/svg/Ellipse.svg')
-  littleDot.classList.add('embed-player__dotImg');
+  cloneDot.setAttribute('src', './assets/svg/Ellipse.svg')
+  cloneDot.classList.add('embed-player__dotImg');
 
-  container.classList.add('.embed-player__container--active');
+  container.classList.add('embed-player__container--active');
   iframe.setAttribute('src', data.embedurl)
   title.textContent = data.name;
 
@@ -194,7 +197,7 @@ function embedOpen(data, youtubeImg, views, personName, littleDot) {
 
 function embedClose() {
   const container = document.querySelector('.embed-player__container');
-  container.classList.remove('.embed-player__container--active');
+  container.classList.remove('embed-player__container--active');
 
   const iframe = document.querySelector('#iframe');
   iframe.setAttribute('src', '')
