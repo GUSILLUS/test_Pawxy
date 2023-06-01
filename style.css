@@ -195,6 +195,7 @@ html, body {
   align-items: center;
   text-align: center;
   gap: 7px;
+  cursor: pointer;
 }
 
 .svse__page-number {

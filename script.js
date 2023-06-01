@@ -1,5 +1,5 @@
 const BASE_URL = 'https://customsearch.googleapis.com/customsearch/v1';
-const API_KEY = 'AIzaSyCj6GQPjkpZeRc2XZ0xf0Bnx0X3QXY8pmk';
+const API_KEY = 'AIzaSyC_H-YYiVxbQ9eXdMO1tQwYVXqTN3E2Bzw';
 const SEARCH_ENGINE_KEY = '944da4e9b7efe4287';
 
 const searchIn = document.querySelector('#searchInput')
@@ -32,8 +32,6 @@ function render(datas) {
     googleLink.classList.add('svse__google-link--active');
   } else {
     buttonNext.classList.remove('show');
-    // buttonPrev.classList.remove('show');
-    // pageNumber.textContent = '';
     googleLink.classList.remove('svse__google-link--active');
   }
 
@@ -89,6 +87,7 @@ function render(datas) {
     link.classList.add('svse__linkDetails-link');
     link.textContent = data.displayLink.split('.').slice(1).join('.');
     link.setAttribute('href', data.link);
+    link.setAttribute('target', '_blank');
 
     views.classList.add('svse__linkDetails-views');
     views.textContent = `${videoobject[0].interactioncount.commarize()} views`;
@@ -164,7 +163,7 @@ function embedOpen(data, youtubeImg, views, personName, littleDot) {
   closeIcon.addEventListener('click', embedClose);
   closeButton.addEventListener('click', embedClose);
 
-  visitButton.setAttribute('src', data.url);
+  visitButton.setAttribute('href', data.url);
 
   littleDot.setAttribute('src', './assets/svg/Ellipse.svg')
   littleDot.classList.add('svse__dotImg');
