@@ -16,87 +16,80 @@
   </head>
   <body>
     <div class="svse__container">
-      <div class="svse__top-row">
-        <img 
-          src="./assets/svg/Paw.svg"
-          alt="Paw" 
-          class="svse__img"
-        >
-        <h1 class="svse__title">
-          Simple Video Search Engine
-        </h1>
+      <div class="header">
+        <div class="header__top-row">
+          <img src="./assets/svg/Paw.svg" alt="Paw" class="header__img">
+          <h1 class="header__title">
+            Simple Video Search Engine
+          </h1>
+        </div>
       </div>
     
-      <div class="svse__search-bar">
-        <input 
-          type="text" 
-          class="svse__search-bar-input"
-          id="searchInput"
-          placeholder="Cute Cats"
-        >
-        <img src="./assets/svg/Search.svg" alt="Search" class="svse__search-bar-img">
-      </div>
-
-      <div class="svse__video-container"></div>
-
-      <div class="svse__bottom-row">
-        <button id="buttonPrev" class="svse__nav-button">
-          <img src="./assets/svg/arrowLeft.svg" alt="Arrow Left">
-          Prev
-        </button>
+      <div class="search-bar">
+        <div class="search-bar__container">
+          <input type="text" class="search-bar__input" id="searchInput" placeholder="Cute Cats">
+          <img src="./assets/svg/Search.svg" alt="Search" class="search-bar__img">
+        </div>
         
-        <p class="svse__page-number"></p>
-
-        <button id="buttonNext" class="svse__nav-button">
-          Next
-          <img src="./assets/svg/arrowRight.svg" alt="Arrow Right">
-        </button>
+      </div>
+      
+      <div class="video-list">
+        <div class="video-list__container"></div>
       </div>
 
-      <a class="svse__google-link" href="" target=”_blank”>
-        <img src="./assets/svg/Search.svg" alt="Search Icon" class="svse__google-search">
-        Search <b id="svse__google-link-b"></b> on Google
-      </a>
-
-      <div class="svse__embed-container">
-        <img src="./assets/svg/Cancel.svg" alt="Cancel" class="svse__embed-video-close">
-        <div class="svse__embed-video">
-          <iframe 
-            src="" 
-            frameborder="0"
-            width="360"
-            height="205"
-            title="YouTube video player"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-            allowfullscreen
-            id="iframe"
-          >
-          </iframe>
-
-          <div class="svse__embed-text-con">
-            <h2 class="svse__embed-video-title"></h2>
-          
-            <div class="svse__embed-video-info">
+      <div class="navigation">
+        <div class="navigation__bottom-row">
+          <button id="buttonPrev" class="navigation__button">
+            <img src="./assets/svg/arrowLeft.svg" alt="Arrow Left">
+            Prev
+          </button>
+        
+          <p class="navigation__page-number"></p>
+        
+          <button id="buttonNext" class="navigation__button">
+            Next
+            <img src="./assets/svg/arrowRight.svg" alt="Arrow Right">
+          </button>
+        </div>
+        
+        <a class="navigation__google-link" href="" target=”_blank”>
+          <img src="./assets/svg/Search.svg" alt="Search Icon" class="navigation__google-search-icon">
+          Search <b id="navigation__google-link-b"></b> on Google
+        </a>
+      </div>
+      
+      <div class="embed-player">
+        <div class="embed-player__container">
+          <img src="./assets/svg/Cancel.svg" alt="Cancel" class="embed-player__video-close">
+          <div class="embed-player__video">
+            <!-- <div class="svse__iframe"> -->
+            <iframe 
+              src="" 
+              frameborder="0" 
+              title="YouTube video player"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowfullscreen 
+              id="iframe">
+            </iframe>
+            <!-- </div> -->
+        
+        
+            <div class="embed-player__text-con">
+              <h2 class="embed-player__video-title"></h2>
+        
+              <div class="embed-player__video-info">
+              </div>
             </div>
           </div>
-        </div>
-
-        <div class="svse__embed-links" >
-          <a 
-            href="" 
-            id="visitButton" 
-            target=”_blank” 
-            class="svse__embed-button visit"
-          >
-            Visit
-          </a>
-          <button 
-            id="closeButton" 
-            target=”_blank” 
-            class="svse__embed-button close"
-          >
-            Close
-          </button>
+        
+          <div class="embed-player__links">
+            <a href="" id="visitButton" target=”_blank” class="embed-player__button visit">
+              Visit
+            </a>
+            <button id="closeButton" target=”_blank” class="embed-player__button close">
+              Close
+            </button>
+          </div>
         </div>
       </div>
 

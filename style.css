@@ -7,8 +7,8 @@
 
 html, body {
   font-family: 'Barlow', sans-serif;
-  width: 360px;
-  height: 760px;
+  width: 100%;
+  height: 100%;
 }
 
 .svse__container {
@@ -18,30 +18,30 @@ html, body {
   padding: 20px 10px 16px;
 }
 
-.svse__top-row {
+.header__top-row {
   display: flex;
   gap: 8px;
   margin-bottom: 20px;
 }
 
-.svse__img {
+.header__img {
   margin-left: 10px;
 }
 
-.svse__title {
+.header__title {
   font-weight: 600;
   color: #2B2F39;
   font-size: 18px;
   line-height: 20px;
 }
 
-.svse__search-bar {
+.search-bar__container {
   padding: 16px;
   display: flex;
   margin-bottom: 16px;
 }
 
-.svse__search-bar-input {
+.search-bar__input {
   display: flex;
   flex-grow: 1;
   border: none;
@@ -55,24 +55,24 @@ html, body {
   font-family: 'Barlow', sans-serif;
 }
 
-.svse__search-bar-input::placeholder {
+.search-bar__input::placeholder {
   font-family: 'Barlow', sans-serif;
   color: #9499A6;
 }
 
-.svse__search-bar-img {
+.search-bar__img {
   width: 16px;
   height: 16px;
 }
 
-.svse__video-container {
+.video-list__container {
   display: flex;
   flex-direction: column;
   gap: 8px;
   margin-bottom: 27px;
 }
 
-.svse__video-item {
+.video-list__item {
   display: flex;
   gap: 16px;
   width: 100%;
@@ -81,15 +81,14 @@ html, body {
   position: relative;
 }
 
-.svse__video-image {
+.video-list__image {
   width: 132px;
-  height: 74px;
   object-fit: cover;
   border-radius: 6px;
   cursor: pointer;
 }
 
-.svse__image-text {
+.video-list__time-duration {
   background: #000000;
   color: #FFFFFF;
   font-weight: 600;
@@ -98,20 +97,20 @@ html, body {
   letter-spacing: 0.25px;
   text-align: center;
   border-radius: 2px;
-  width: 27px;
+  width: min-content;
   height: 15px;
   position: absolute;
   left: 109px;
   bottom: 12px;
 }
 
-.svse__video-info-con {
+.video-list__info-container {
   display: flex;
+  width: 100%;
   flex-direction: column;
 }
 
-.svse__video-title {
-  width: 168px;
+.video-list__title {
   height: 32px;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -120,11 +119,11 @@ html, body {
   line-height: 16px;
   letter-spacing: 0.25px;
   color: #2B2F39;
-  margin-bottom: 8px;
+  margin: 0 8px 8px 0;
   cursor: pointer;
 }
 
-.svse__video-person-name {
+.video-list__person-name {
   text-transform: uppercase;
   text-decoration: none;
   font-weight: 500;
@@ -135,26 +134,26 @@ html, body {
   margin-bottom: 14px;
 }
 
-.svse__linkDetails {
+.video-list__videoDetails {
   display: flex;
   align-items: center;
   width: 100%;
   justify-content: space-between;
 }
 
-.svse__linkDiv {
+.video-list__linkDiv {
   display: flex;
   align-items: center;
 }
 
-.svse__linkDetails-img {
+.video-list__videoDetails-img {
   position: relative;
   width: 10px;
   height: 10px;
   margin-right: 4px;
 }
 
-.svse__linkDetails-link {
+.video-list__videoDetails-link {
   text-decoration: none;
   font-weight: 500;
   font-size: 10px;
@@ -163,11 +162,11 @@ html, body {
   color: #5D6067;
 }
 
-.svse__linkDetails-link::first-letter {
+.video-list__videoDetails-link::first-letter {
   text-transform: capitalize;
 }
 
-.svse__linkDetails-views {
+.video-list__videoDetails-views {
   display: flex;
   font-weight: 500;
   font-size: 10px;
@@ -176,14 +175,14 @@ html, body {
   color: #5D6067;
 }
 
-.svse__bottom-row {
+.navigation__bottom-row {
   display: flex;
   justify-content: space-around;
   margin-bottom: 16px;
   padding: 16px;
 }
 
-.svse__nav-button {
+.navigation__button {
   display: none;
   border: none;
   background: transparent;
@@ -198,7 +197,7 @@ html, body {
   cursor: pointer;
 }
 
-.svse__page-number {
+.navigation__number {
   font-family: 'Barlow', sans-serif;
   font-size: 14px;
   line-height: 14px;
@@ -206,7 +205,7 @@ html, body {
   color: #5D6067;
 }
 
-.svse__google-link {
+.navigation__google-link {
   font-family: 'Barlow', sans-serif;
   font-size: 14px;
   line-height: 10px;
@@ -219,16 +218,16 @@ html, body {
   align-items: center;
 }
 
-.svse__google-link--active {
+.navigation__google-link--active {
   display: block;
 }
 
-.svse__google-search {
+.navigation__google-search-icon {
   width: 10px;
   height: 10px;
 }
 
-#svse__google-link-b {
+#navigation__google-link-b {
   font-weight: 700;
 }
 
@@ -236,24 +235,26 @@ html, body {
   display: flex;
 }
 
-.svse__embed-container {
+.embed-player__container {
   display: none;
   flex-direction: column;
   position: absolute;
+  top: 0;
+  left: 0;
   background-color:#202124;
   width: 100%;
-  max-width: 360px;
   height: 100%;
   z-index: 1;
   justify-content:space-between;
 }
 
-.svse__embed-video {
+.embed-player__video {
   display: flex;
   flex-direction: column;
+  width: 100%;
 }
 
-.svse__embed-video-title {
+.embed-player__video-title {
   overflow: hidden;
   text-overflow: ellipsis;
   font-weight: 600;
@@ -264,42 +265,42 @@ html, body {
   margin-bottom: 8px;
 }
 
-.svse__embed-text-con {
+.embed-player__text-con {
   padding: 0 24px;
   margin-top: 16px;
 }
 
-.svse__embed-container--active {
+.embed-player__container--active {
   display: flex;
 }
 
-.svse__embed-video-close {
+.embed-player__video-close {
   width: 32px;
   height: 32px;
   align-self: flex-end;
   margin: 10px 10px 0 0;
 }
 
-.svse__embed-video-info {
+.embed-player__video-info {
   display: flex;
 }
 
-.svse__embed-video-info > .svse__video-person-name {
+.embed-player__video-info > .video-list__person-name {
   margin: 0 16px 0 0;
 }
 
-.svse__embed-video-info > .svse__linkDetails-views {
+.embed-player__video-info > .video-list__videoDetails-views {
   margin: 0 16px 0;
 }
 
-.svse__embed-links {
+.embed-player__links {
   display: flex;
   padding: 0 16px;
   justify-content: space-between;
   margin-bottom: 16px;
 }
 
-.svse__embed-button {
+.embed-player__button {
   display: flex;
   width: 80px;
   height: 34px;
@@ -323,4 +324,13 @@ html, body {
 
 .close {
   background-color: #5D6067;
+}
+
+.svse__iframe {
+  width: 100%;
+  height: auto
+}
+
+@media only screen and (min-width: 600px) and (max-width: 900px) {
+
 }
