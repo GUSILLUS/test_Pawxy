@@ -1,5 +1,5 @@
 const BASE_URL = 'https://customsearch.googleapis.com/customsearch/v1';
-const API_KEY = 'AIzaSyC_H-YYiVxbQ9eXdMO1tQwYVXqTN3E2Bzw';
+const API_KEY = 'AIzaSyBE_jTwDqs6FJ88eDAOMDhQvxnNYuRpoq8';
 const SEARCH_ENGINE_KEY = '944da4e9b7efe4287';
 
 const searchIn = document.querySelector('#searchInput')
